@@ -1,0 +1,41 @@
+﻿<html lang="en">
+<head>
+    <title>BeastOnWeb</title>
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <script src="~/Scripts/jquery-1.9.0.min.js"></script>
+</head>
+<body>
+    <div class="navbar navbar-default">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/Home/Index">BeastOnWeb</a>
+            </div>
+            <div class="navbar-collapse collapse navbar-responsive-collapse">
+                <ul class="nav navbar-nav">
+                    <li><a href="/Home/About">About</a></li>
+                    <li><a href="/Home/Portfolio">Portfolio</a></li>
+                    <li><a href="/Home/Contact">Contact</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="https://plus.google.com/106450891718995084200/about" target="_blank">Google+</a></li>
+                    <li><a href="https://github.com/samidabeast" target="_blank">GitHub</a></li>
+                    <li><a href="https://www.linkedin.com/in/beastonweb" target="_blank">LinkedIn</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <main>
+            @RenderBody()
+        </main>
+    </div>
+    <footer>&copy; @DateTime.Now.Year - BeastOnWeb Development </footer>
+</body>
+</html>
