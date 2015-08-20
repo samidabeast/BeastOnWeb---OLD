@@ -1,0 +1,60 @@
+﻿@{
+    ViewBag.Title = "Time Tracker";
+    Layout = "~/Views/_Layout.cshtml";
+}
+
+<div class="page-header">
+    <h2>Today is : @DateTime.Now.ToShortDateString()</h2>
+</div>
+<div ng-app="app" ng-controller="MainCtrl" ng-init="initLoad()">
+    <div class="row">
+        <table class="table">
+            <tr class="success">
+                <th>ID</th>
+                <th>Activity</th>
+                <th>Start Time</th>
+                <th>End Time</th>
+                <th>Time Spent</th>
+                <th></th>
+            </tr>
+            <tr ng-repeat="item in activities" ng-class='{ warning: item.timeSpent == 0 }'>
+                <td>{{item.id}}</td>
+                <td>{{item.title}}</td>
+                <td>{{item.startTime | date: 'hh:mm a' }}</td>
+                <td>{{item.endTime | date: 'hh:mm a' }}</td>
+                <td>{{item.timeSpent | setDecimal}}</td>
+                <td>
+                    <a href="javascript:void(0)" type="button" class="btn btn-danger" ng-click="endActivity(item.id)">End</a>
+                </td>
+            </tr>
+            <tr class="success">
+                <th colspan="4">
+                    Total
+                </th>
+                <th colspan="2">
+                    {{totalWorkHrs | setDecimal}}
+                </th>
+            </tr>
+        </table>
+    </div>
+    <div class="row">
+        <div class="col-xs-2 col-lg-offset-10">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-1">
+            <label for="title">Activity Title</label>
+        </div>
+        <div class="col-xs-3">
+            <div class="input-group">
+                <input type="text" class="form-control" id="title" ng-model="activity">
+                <span class="input-group-btn">
+                    <button type="submit" class="btn btn-success" ng-click="addActivity(activity)">Add</button>
+                </span>
+            </div>
+        </div>
+        <div class="col-xs-2 col-xs-offset-6">
+            <button type="button" class="btn btn-danger" ng-click="clearActivities()">Clear all</button>
+        </div>
+    </div>
+</div>

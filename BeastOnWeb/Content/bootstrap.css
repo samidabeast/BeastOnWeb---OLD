@@ -313,7 +313,7 @@ th {
 
         .table td,
         .table th {
-            background-color: #fff !important;
+            background-color: #000 !important;
         }
 
     .table-bordered th,
@@ -2851,7 +2851,7 @@ pre {
 }
 
 table {
-    background-color: transparent;
+    background-color: #222222;
 }
 
 caption {
@@ -2988,7 +2988,7 @@ table th[class*="col-"] {
 .table > thead > tr.success > th,
 .table > tbody > tr.success > th,
 .table > tfoot > tr.success > th {
-    background-color: #3fb618;
+    background-color: #3fc6a9;
 }
 
 .table-hover > tbody > tr > td.success:hover,
@@ -3011,7 +3011,8 @@ table th[class*="col-"] {
 .table > thead > tr.info > th,
 .table > tbody > tr.info > th,
 .table > tfoot > tr.info > th {
-    background-color: #9954bb;
+    background-color: #fff;
+    color: #000;
 }
 
 .table-hover > tbody > tr > td.info:hover,
@@ -3034,7 +3035,7 @@ table th[class*="col-"] {
 .table > thead > tr.warning > th,
 .table > tbody > tr.warning > th,
 .table > tfoot > tr.warning > th {
-    background-color: #ff7518;
+    background-color: #3fb618;
 }
 
 .table-hover > tbody > tr > td.warning:hover,
@@ -4020,8 +4021,8 @@ select[multiple].form-group-lg .form-control {
 
 .btn-danger {
     color: #ffffff;
-    background-color: #ff0039;
-    border-color: #ff0039;
+    background-color: #ff3260;
+    border-color: #ff3260;
 }
 
     .btn-danger:hover,
